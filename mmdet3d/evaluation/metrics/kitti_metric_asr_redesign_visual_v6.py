@@ -9,7 +9,7 @@ v6 is the simplified-metric variant of v5
 evaluation pipeline (matching, IoU, real-Car safeguard, one-to-one
 assignment, suppression check, threshold sweep, delta-mAP, CA) and the
 visualization machinery byte-identical, and replaces the v5 headline
-metric set {ASR, Suppression, FMR} with the simpler {M_ASR, D_ASR}
+metric set {ASR, Suppression, FMR} with the simpler {MSR, DR}
 partition of the suppressed patches.
 
 Registered class: `KittiMetricMDASRVisual`. Decorator:
@@ -20,6 +20,11 @@ side-by-side without colliding.
 
 Headline metrics (per score threshold X ∈ {0.1, 0.3, 0.5}, per source
 class cls ∈ {Pedestrian, Cyclist}, plus an explicit Overall sum)
+
+In paper the paramters are renamed:
+M_ASR --> Misclassification Success Rate (MSR)
+D_ASR --> Disappearance Rate (DR)
+MSR + DR --> TDR (Total Disruption Rate)
 -----------------------------------------------------------------
   * M_ASR (Misdetection ASR)
         ≡ "car_created AND original suppressed".

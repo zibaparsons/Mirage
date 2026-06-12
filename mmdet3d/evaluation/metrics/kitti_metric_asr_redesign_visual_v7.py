@@ -20,6 +20,12 @@ side-by-side without colliding.
 
 Headline metrics (per score threshold X ∈ {0.1, 0.3, 0.5}, per source
 class cls ∈ {Pedestrian, Cyclist}, plus an explicit Overall sum)
+
+
+In paper the paramters are renamed:
+M_ASR --> Misclassification Success Rate (MSR)
+D_ASR --> Disappearance Rate (DR)
+MSR + DR --> TDR (Total Disruption Rate)
 -----------------------------------------------------------------
   * M_ASR (Misdetection ASR)
         ≡ "car_created AND original suppressed".
